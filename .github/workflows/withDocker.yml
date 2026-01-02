@@ -1,0 +1,26 @@
+name: Playwright API Tests - DOCKERFILE
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  playwright-docker:
+    runs-on: ubuntu-latest
+    environment: CI CD Env
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t playwright-api-tests .
+
+      - name: Run specific Playwright tests in container
+        run: |
+          docker run --rm \
+            -e API_BASE_URL=${{ vars.API_BASE_URL }} \
+            -e REPO_VARIABLE=${{ vars.REPO_VARIABLE }} \
+            playwright-api-tests \
+            npx playwright test tests/api-int-secretPassed
