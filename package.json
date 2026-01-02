@@ -1,0 +1,11 @@
+{
+  "name": "PlaywrightDocker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3"
+  },
+  "scripts": {}
+}
