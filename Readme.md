@@ -9,7 +9,7 @@
 
 ## Running Playwright API Tests in Docker container in host machine
 
-### 1. Local Setup and Test Validation
+### Local Setup and Test Validation
 
 Before using Docker, it is important to verify that your Playwright tests work locally.
 
@@ -60,3 +60,10 @@ npm notice New minor version of npm available! 11.6.2 -> 11.7.0
 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
 npm notice To update run: npm install -g npm@11.7.0
 ```
+
+### Running these tests inside a docker container on github actions
+
+All the steps are same as in this repo: https://github.com/Atharva-Deshmukh/CypressDockerProject
+ 
+yml files are adapted to playwright logic with yarn, just this change is there.
+Rest everything is same
